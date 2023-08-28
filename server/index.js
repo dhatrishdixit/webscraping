@@ -47,7 +47,7 @@ app.get('/',async(req,res)=>{
                 const link = $(ele).find('a').attr('href');
                 scrappedData.push({
                     heading:`${heading}`,
-                    link:`${link}`
+                    link:`${url}${link}`
                 })
             })
             const jsonString = JSON.stringify(scrappedData, null, 2); // The second argument adds indentation for readability
